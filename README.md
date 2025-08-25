@@ -1,69 +1,55 @@
-# React + TypeScript + Vite
+# React Component Development Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a submission for the React Component Development assignment. It includes two reusable UI components: an InputField and a DataTable, built with modern web technologies.
 
-Currently, two official plugins are available:
+## Tech Stack
+- React
+- TypeScript
+- TailwindCSS
+- Storybook
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Components Built
 
-## Expanding the ESLint configuration
+### 1. InputField
+A flexible and customizable input component with the following features:
+- [cite_start]Support for labels, placeholders, helper text, and error messages[cite: 10].
+- [cite_start]Different states: `disabled`, `invalid`, `loading`[cite: 11].
+- [cite_start]Three variants: `filled`, `outlined`, `ghost`[cite: 12].
+- [cite_start]Multiple sizes: `small`, `medium`, `large`[cite: 13].
+- [cite_start]Optional features like a password toggle and a clear button[cite: 15].
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 2. DataTable
+A data table to display tabular data with these features:
+- [cite_start]Renders data from a given array of objects[cite: 33].
+- [cite_start]Column sorting (ascending/descending)[cite: 34].
+- [cite_start]Row selection (single and multiple)[cite: 35].
+- [cite_start]Loading and Empty states for better user experience[cite: 36, 37].
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## How to Run the Project Locally
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+Follow these steps to run the project on your local machine.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1.  **Clone the repository:**
+    ```bash
+    git clone <your-repo-url>
+    ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2.  **Navigate to the project directory:**
+    ```bash
+    cd <your-project-folder>
+    ```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+3.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+4.  **Run Storybook:**
+    ```bash
+    npm run storybook
+    ```
+    This will open Storybook in your browser, where you can view and interact with the components.
+
+## My Approach
+(Yahan par 1-2 line mein batayein ki aapne kaam kaise kiya. উদাহৰণ ke liye:)
+In this project, I focused on creating a clean and scalable folder structure. For styling, I used `clsx` to dynamically apply TailwindCSS classes based on the component's props. For state management within components, I used React hooks like `useState` and `useMemo` to handle features like sorting and selection efficiently.
